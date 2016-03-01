@@ -1,0 +1,7 @@
+Group-25
+--------------------
+With 1 GiB RAM: page-fault rate p = 1.0E-5
+Base minimum page-fault service time S_min = 150 microseconds
+With conventional swap disk: total page-fault service time S = S_min + 5 milliseconds
+--------------------
+
