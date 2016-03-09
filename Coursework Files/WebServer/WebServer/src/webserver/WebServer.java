@@ -24,7 +24,27 @@ public class WebServer {
     }
 
     public void start() throws IOException {
-        //TODO
+        
+        ServerSocket serverSock = new ServerSocket (port);
+        while (true) {
+        Socket conn = serverSock.accept();
+        
+        InputStream is = conn.getInputStream();
+        
+        try {
+            Request req = Request.parse(is);
+        } catch (MessageFormatException ex) {}
+        
+        OutputStream os = conn.getOutputStream();
+        
+        Response msg = new Response(200);
+        msg.write(os);
+        os.write("I chose this message.\n".getBytes());
+        
+        conn.close();
+        
+        
+    }
     }
 
     public static void main(String[] args) throws IOException {
