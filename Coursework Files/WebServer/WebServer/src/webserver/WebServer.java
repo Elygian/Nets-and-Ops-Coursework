@@ -34,7 +34,7 @@ public class WebServer {
         try {
             Request req = Request.parse(is);
         } catch (MessageFormatException ex) {}
-        
+             
         OutputStream os = conn.getOutputStream();
         
         Response msg = new Response(200);
@@ -44,9 +44,9 @@ public class WebServer {
         conn.close();
         
         
+      }
     }
-    }
-
+    
     public static void main(String[] args) throws IOException {
         String usage = "Usage: java webserver.WebServer <port-number> <root-dir>";
         if (args.length != 2) {
