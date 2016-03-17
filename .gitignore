@@ -1,2 +1,2 @@
-AppData
-*.properties
+/private.xml
+/private.properties
