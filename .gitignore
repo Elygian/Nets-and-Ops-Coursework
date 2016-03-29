@@ -1,2 +1,5 @@
 private.xml
 private.properties
+dist/*
+build/*
+/Coursework Files/WebServer/WebServer/build/
